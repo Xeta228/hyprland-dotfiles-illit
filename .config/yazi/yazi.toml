@@ -1,0 +1,28 @@
+# ~/.config/yazi/yazi.toml
+
+[mgr]
+# Всегда показывать скрытые файлы
+show_hidden = true
+
+[opener]
+# Определение программ (openers)
+edit = [
+	{ run = 'kate %s', block = false, for = "linux", orphan = true },
+]
+pdf = [
+	{ run = 'okular %s', block = false, for = "linux", orphan = true },
+]
+
+[open]
+# Правила открытия по расширениям
+prepend_rules = [
+	{ name = "*.css",   use = "edit" },
+	{ name = "*.json",   use = "edit" },
+	{ name = "*.jsonc",   use = "edit" },
+	{ name = "*.conf",   use = "edit" },
+	{ name = "*.toml",   use = "edit" },
+	{ name = "*.xml",   use = "edit" },
+	{ mime = "application/pdf", use = "pdf" },
+]
+
+

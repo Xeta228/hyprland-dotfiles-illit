@@ -1,0 +1,46 @@
+{
+    "$schema": "https://github.com",
+    "logo": {
+        "type": "small",
+        "padding": {
+            "top": 2,
+            "left": 2
+        }
+    },
+    "display": {
+        "separator": " :  "
+    },
+    "modules": [
+        {
+            "type": "os",
+            "key": "OS",
+            "keyColor": "35" 
+        },
+        {
+            "type": "memory",
+            "key": "Memory",
+            "keyColor": "32"
+        },
+        {
+            "type": "disk",
+            "key": "Disk (/)",
+            "folders": "/",
+            "keyColor": "34"
+        },
+        {
+            "type": "wm",
+            "key": "WM",
+            "keyColor": "36"
+        },
+        {
+            "type": "terminal",
+            "key": "Terminal",
+            "keyColor": "33"
+        },
+        "break",
+        {
+            "type": "colors",
+            "symbol": "block"
+        }
+    ]
+}

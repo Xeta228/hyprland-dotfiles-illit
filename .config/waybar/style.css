@@ -1,0 +1,156 @@
+/* --- Общие стили --- */
+* {
+    border: none;
+    font-family: "Font Awesome 6 Free", "Roboto", "Arial", sans-serif;
+    font-size: 12px; /* Чуть уменьшил шрифт для компактности */
+    color: #2d2d2d;
+    border-radius: 12px; /* Меньше радиус для узкого бара */
+    transition: all 0.3s ease;
+    min-height: 0; /* Убираем минимальную высоту по умолчанию */
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* --- Группы модулей --- */
+
+.modules-right, .modules-center, .modules-left {
+    margin-top: 2px; /* Уменьшил отступ от края экрана */
+    padding: 0px 6px; /* Сузил внутренние отступы групп */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.modules-right {
+    background-color: rgba(245, 245, 235, 0.8);
+    margin-right: 8px;
+}
+
+.modules-center {
+    background-color: rgba(245, 245, 235, 0.7);
+}
+
+.modules-left {
+    background-color: rgba(215, 225, 235, 0.8);
+    margin-left: 8px;
+}
+
+/* --- Ворксейсы (сделаем их еще меньше) --- */
+#workspaces button {
+padding: 0px 4px; /* Минимальные отступы между кнопками */
+margin: 2px 0px;  /* Уменьшил высоту кнопок */
+color: #555555;
+}
+
+#workspaces button.focused {
+background-color: #454545;
+color: #ffffff;
+}
+
+/* --- Индивидуальные модули (сужаем) --- */
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor {
+padding: 0 6px; /* Уменьшил горизонтальные отступы между иконками */
+margin: 0;
+}
+
+/* Кнопка питания (уменьшенная) */
+#custom-power {
+background-color: #454545;
+color: #ffffff;
+border-radius: 8px; /* Квадратнее, чтобы занимала меньше места */
+margin: 3px;
+padding: 0 6px;
+}
+
+/* --- Контекстное меню --- */
+menu {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    padding: 4px;
+}
+
+menuitem {
+    padding: 3px 8px; /* Тонкие пункты меню */
+}
+
+/* Фикс для высоты трея (иногда он раздувает бар) */
+#tray {
+padding-top: 0;
+padding-bottom: 0;
+margin-top: -2px;
+margin-bottom: -2px;
+}
+
+
+/* Стили для тултипов (всплывающих подсказок при наведении) */
+tooltip {
+    background: rgba(245, 245, 235, 0.9); /* Светлый фон как у бара */
+    border: 1px solid rgba(200, 180, 150, 0.5);
+    border-radius: 10px;
+}
+
+tooltip label {
+    color: #2d2d2d; /* Темный текст */
+    padding: 4px;
+}
+
+/* Стили конкретно для календаря */
+#calendar {
+padding: 10px;
+background-color: rgba(245, 245, 235, 0.95);
+border: 1px solid rgba(200, 180, 150, 0.5);
+}
+
+/* Текст внутри календаря */
+#calendar * {
+color: #2d2d2d;
+}
+
+/* Выделение сегодняшней даты в календаре */
+#calendar .today {
+background-color: #454545;
+color: #ffffff;
+border-radius: 5px;
+}
+
+/* --- Полная радуга на 10 ворксейсов --- */
+
+#workspaces button label {
+font-weight: 900;
+/* Тонкий контур, чтобы яркие цвета были читаемы на светлом фоне */
+text-shadow: 0px 1px 1px rgba(0,0,0,0.15);
+}
+
+#workspaces button:nth-child(1) label { color: #ff0000; } /* Красный */
+#workspaces button:nth-child(2) label { color: #ff6600; } /* Оранжевый */
+#workspaces button:nth-child(3) label { color: #ffcc00; } /* Янтарный */
+#workspaces button:nth-child(4) label { color: #88cc00; } /* Салатовый */
+#workspaces button:nth-child(5) label { color: #00cc66; } /* Зеленый */
+#workspaces button:nth-child(6) label { color: #00cccc; } /* Бирюзовый */
+#workspaces button:nth-child(7) label { color: #0088ff; } /* Голубой */
+#workspaces button:nth-child(8) label { color: #6600ff; } /* Синий */
+#workspaces button:nth-child(9) label { color: #cc00ff; } /* Фиолетовый */
+#workspaces button:nth-child(10) label { color: #ff00cc; } /* Розовый */
+
+/* Активный ворксейс (белый текст на темном фоне из твоего стиля) */
+#workspaces button.focused label {
+color: #ffffff;
+text-shadow: none;
+}
+
+
+
+
+
+
+

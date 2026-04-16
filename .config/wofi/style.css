@@ -1,0 +1,87 @@
+* {
+font-family: 'CaskaydiaCove Nerd Font', monospace;
+font-size: 18px;
+}
+
+/* Window */
+window {
+    margin: 0px;
+    padding: 12px;
+    border: 1px solid @overlay0;
+    border-radius: 12px;
+    background-color: rgba(42, 37, 37, 0.85); /* тёплый + прозрачный */
+}
+
+/* Inner Box */
+#inner-box {
+margin: 5px;
+padding: 10px;
+border: none;
+background-color: transparent;
+}
+
+/* Outer Box */
+#outer-box {
+margin: 5px;
+padding: 10px;
+border: none;
+background-color: transparent;
+}
+
+/* Scroll */
+#scroll {
+margin: 0px;
+padding: 10px;
+border: none;
+background-color: transparent;
+}
+
+/* Input */
+#input {
+margin: 5px 20px;
+padding: 10px;
+border: none;
+border-radius: 8px;
+color: @text;
+background-color: rgba(49, 50, 68, 0.6); /* мягкий input */
+}
+
+/* убираем агрессивный outline */
+#input * {
+outline: none !important;
+}
+
+/* Text */
+#text {
+margin: 5px;
+border: none;
+color: @text;
+}
+
+/* Entries */
+#entry {
+background-color: transparent;
+border-radius: 8px;
+padding: 6px;
+}
+
+/* стрелка */
+#entry arrow {
+border: none;
+color: @overlay1;
+}
+
+/* Selected Entry */
+#entry:selected {
+background-color: rgba(108, 112, 134, 0.25); /* мягкое выделение */
+border: none;
+}
+
+#entry:selected #text {
+color: @lavender;
+}
+
+/* Drag */
+#entry:drop(active) {
+background-color: @overlay0 !important;
+}
