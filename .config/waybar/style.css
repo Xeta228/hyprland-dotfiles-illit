@@ -15,7 +15,7 @@ window#waybar {
 
 /* --- Группы модулей --- */
 
-.modules-right, .modules-center, .modules-left {
+.modules-right, .modules-left {
     margin-top: 2px; /* Уменьшил отступ от края экрана */
     padding: 0px 6px; /* Сузил внутренние отступы групп */
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -24,10 +24,6 @@ window#waybar {
 .modules-right {
     background-color: rgba(245, 245, 235, 0.8);
     margin-right: 8px;
-}
-
-.modules-center {
-    background-color: rgba(245, 245, 235, 0.7);
 }
 
 .modules-left {
